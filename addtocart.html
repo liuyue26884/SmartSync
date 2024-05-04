@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales</title>
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="addtocart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@1,500&display=swap"
+        rel="stylesheet">
+    <style>
+        .success-message {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a class="home" href="home.html"><img src="TCCJY Logo.png.jpg"></a>
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i>
+            <p id="count">0</p>
+        </div>
+    </div>
+    <div class="container">
+        <div id="root"></div>
+        <div class="sidebar">
+            <div class="head">
+                <p>Add to Cart</p>
+            </div>
+            <div id="cart_Item">Empty Cart</div>
+            <div class="foot">
+                <h3>Total</h3>
+                <h2 id="total">RM 0.00</h2>
+                <form id="myForm">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </form>
+                <script>
+                    document.getElementById("myForm").addEventListener("submit", function (event) {
+                        event.preventDefault(); 
+                        window.location.href = "payment.html"; 
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="success-message" id="successMessage">
+        Submit Successfully!
+    </div>
+
+    <script src="addtocart.js"></script>
+
+    <script>
+        const product = [
+            {
+                id: 0,
+                image: 'glasses1.png',
+                title: 'Golden Modern Glasses',
+                price: 50,
+            },
+
+            {
+                id: 1,
+                image: 'glasses2.png',
+                title: 'Circle Lens Glasses',
+                price: 30,
+            },
+
+            {
+                id: 2,
+                image: 'glasses3.png',
+                title: 'Lexury Lens Glasses',
+                price: 100,
+            },
+
+            {
+                id: 3,
+                image: 'glasses4.png',
+                title: 'Normal Lens Glasses',
+                price: 20,
+            },
+
+            {
+                id: 4,
+                image: 'glasses5.png',
+                title: 'Tradisionalical Glasses',
+                price: 60,
+            },
+
+            {
+                id: 5,
+                image: 'glasses6.png',
+                title: 'Retro blackgrey Glasses',
+                price: 50,
+            },
+
+            {
+                id: 6,
+                image: 'glasses7.png',
+                title: 'Half-rimmed Glasses',
+                price: 40,
+            },
+
+            {
+                id: 7,
+                image: 'glasses8.png',
+                title: 'Golden Affluence Glasses',
+                price: 70,
+            },
+
+            {
+                id: 8,
+                image: 'contactlens1.png',
+                title: 'Elegant Contact Lens',
+                price: 200,
+            },
+
+            {
+                id: 9,
+                image: 'contactlens2.png',
+                title: 'A++ Contact Lens',
+                price: 80,
+            }
+        ];
+
+        const submitButton = document.querySelector("input[type='submit']");
+        const resetButton = document.querySelector("input[type='reset']");
+        const successMessage = document.getElementById("successMessage");
+
+        submitButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            "You are Submit Successfully"
+            successMessage.style.display = "block";
+            setTimeout(function () {
+                successMessage.style.display = "none";
+            }, 3000);
+        });
+
+        resetButton.addEventListener("click", function () {
+            document.querySelector("#myForm").reset();
+        });
+    </script>
+</body>
+
+</html>

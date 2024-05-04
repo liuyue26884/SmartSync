@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Ship</title>
+    <link rel="stylesheet" href="member.css">
+</head>
+
+<body>
+    <div class="member">
+        <p>
+        <h1>Member Ship</h1>
+        </p>
+    </div>
+    <div class="payment">
+        <br\>
+        <p><h3>!!!To become a member in our <u>TCCJY</u>, a payment is required for every person who are interest!!!</h3></p>
+    </div>
+    <div class="container">
+        <div class="inputBox">
+            <span>Full Name : </span>
+            <input type="text" placeholder="Hon Min Guan">
+        </div>
+        <div class="inputBox">
+            <span>Email : </span>
+            <input type="email" placeholder="honminguan@gmail.com">
+        </div>
+        <div class="submit">
+            <button id="checkoutButton">Submit</button>
+        </div>
+    </div>
+    <script>
+        var checkoutButton = document.getElementById("checkoutButton");
+        checkoutButton.addEventListener("click", function () {
+            window.location.href = "payment.html";
+        });
+    </script>
+</body>
+
+</html>

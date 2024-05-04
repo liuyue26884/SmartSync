@@ -1,0 +1,164 @@
+nav.horizontal ul {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+body>header>nav.horizontal {
+    background-color: rgb(72, 140, 100);
+    clear: right;
+    height: auto;
+}
+
+body>header>nav.horizontal>ul {
+    padding: 20px;
+}
+
+body>header>nav.horizontal>ul>li {
+    font-size: 1.2em;
+    height: 30px;
+    text-transform: uppercase;
+    width: 140px;
+}
+
+body>header>nav.horizontal a {
+    color: rgb(240, 224, 240);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 250px;
+    max-height: 100px;
+    margin-top: 5px;
+}
+
+.why {
+    display: flex;
+    align-items: center;
+}
+
+.why img {
+    max-width: 200px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+article>header>h1 {
+    color: black;
+    font-size: 2em;
+    line-height: 2em;
+    text-align: left;
+    text-decoration: underline;
+}
+
+article p {
+    text-align: center;
+}
+
+.image-text-container {
+    display: flex;
+    align-items: center;
+}
+
+.image-text-container img {
+    max-width: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: block;
+}
+
+.image-text-container p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+body>header>h1 {
+    background-color: rgb(155, 155, 228);
+    color: #011a1d;
+    font-size: 2em;
+    line-height: 2em;
+    text-align: center;
+}
+
+html {
+    background-color: pink;
+    height: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+}
+
+body {
+    box-shadow: rgb(10, 24, 51) 2px 0px 5px, rgb(30, 40, 45) -5px 0px 15px;
+    margin: 0px auto;
+    min-width: 320px;
+    max-width: 1024px;
+    width: 100%;
+}
+
+footer {
+    display: block;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    background: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+footer {
+    color: pink;
+    background: linear-gradient(to bottom, rgb(80, 70, 30), blue);
+    -moz-column-width: 200px;
+    -webkit-column-width: 200px;
+    column-width: 220px;
+
+    -moz-column-gap: 25px;
+    -webkit-column-gap: 25px;
+    column-gap: 25px;
+
+    padding: 20px 40px;
+
+}
+
+footer h1 {
+    color: rgb(160, 85, 207);
+    font-size: 1em;
+    margin: 10px 0px;
+}
+
+footer h1:first-of-type {
+    margin-top: 0px;
+}
+
+footer a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+body {
+    line-height: 1.2em;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul {
+    list-style: none;
+    list-style-image: none;
+}
+
+nav a {
+    text-decoration: none;
+}

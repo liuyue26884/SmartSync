@@ -1,0 +1,249 @@
+@media (max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+        flex-direction: column;
+    }
+
+    .nav-links ul li {
+        display: block;
+        flex-direction: column;
+        border: 1px solid lightblue;
+        float: right;
+
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lobster', cursive;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 10, 35, 0.5), rgba(4, 10, 35, 0.5)), url(klccbackground.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    margin-left: -60px;
+    width: 300px;
+    height: 100px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #60e9cd;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    background: #75ec6d;
+    height: 2px;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: aquamarine;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: aqua;
+}
+
+.option {
+    display: inline-block;
+    text-decoration: none;
+    color: antiquewhite;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.option:hover {
+    border: 1px solid #fff;
+    background: #67f0f5;
+    transition: 1s;
+    color: black;
+}
+
+.glasses {
+    width: 88%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p {
+    color: #520707;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.services {
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+.services img {
+    width: 250px;
+    height: 120px;
+    margin: 5px;
+}
+
+.h2 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.services:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width:700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+.physical {
+    width: 88%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.shop {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.shop img {
+    width: 100%;
+    display: block;
+    border: 1px solid black;
+    height: 80%;
+    border-radius: 3px;
+}
+
+.layer {
+    background: transparent;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+}
+
+.layer:hover {
+    background: rgba(87, 198, 238, 0.7);
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: rgb(240, 232, 232);
+    font-size: 30px;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(-50%);
+    transition: 0.6s;
+    position: absolute;
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+.enquired {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.review {
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.review img {
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-mail Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@1,500&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <form onsubmit="sendEmail(); resetForm(); return false;">
+            <a class="home" href="home.html"><img src="TCCJY Logo.png.jpg"></a>
+            <h3>Contact Us</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your E-mail" required>
+            <input type="tel" id="phone" placeholder="6012-345 6789" required>
+            <textarea id="message" rows="4" placeholder="How can we assist you?"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "tccjy@gmail.com",
+                Password: "44be0c6f2c",
+                To: 'tccjy@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "New Contact Form Enquiry",
+                Body: "Name: " + document.getElementById("name").value
+                    + "\nEmail: " + document.getElementById("email").value
+                    + "\nPhone Number: " + document.getElementById("phone").value
+                    + "\nMessage: " + document.getElementById("message").value
+            }).then(
+                message => {
+                    alert("Message sent successfully");
+                    resetForm();
+                }
+            );
+        }
+
+        function resetForm() {
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("message").value = "";
+        }
+    </script>
+</body>
+
+</html>
